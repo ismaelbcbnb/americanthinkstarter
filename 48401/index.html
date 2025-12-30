@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="viewport" content="target-densitydpi=device-dpi, width=device-width"><!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">--><meta name="author" content="Netex"><meta name="dcterms.created" content="28-01-2016 09:24:13"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=Edge"><![endif]--><link data-move-head="true" rel="stylesheet" href="commoncontents/kidsBox/js/netex/plugins/audio/netexAudioSkin.css"><link data-move-head="true" rel="stylesheet" href="commoncontents/kidsBox/css/kidsBox_min.css"><link data-move-head="true" rel="stylesheet" href="commoncontents/kidsBox/js/netex/htmlActivity/css/testLC_kidsBox_min.css"><title>Presentation plus</title><link rel="stylesheet" href="commoncontents/ntxtmp/css/libs/jquery-ui.min.css"><link rel="stylesheet" href="commoncontents/ntxtmp/css/libs/normalize.css"><link rel="stylesheet" href="commoncontents/ntxtmp/css/libs/animate.min.css"><link rel="stylesheet" href="commoncontents/ntxtmp/js/netex/plugins/video/netexVideoSkin.css"><link rel="stylesheet" href="commoncontents/ntxtmp/js/netex/plugins/audio/netexAudioSkin.css"><link rel="stylesheet" href="commoncontents/ntxtmp/css/netex/ntxtmp_min.css"><meta name="learningmaker-version" content="4.2.3.12"></head><body data-course-id="CODE-48401" class="teacher-package">
+
+            
+
+
+<div id="page-wrap" class="portrait">
+    <noscript id="gaTrackingConfig" data-ga-tracking-id="UA-8600104-1" data-ga-tracking-product-name="presentationplus" data-ga-tracking-course-name="thinkAE" data-ga-tracking-level-name="starter" data-ga-tracking-unit-name=""></noscript>
+
+<div id="main-menu-wrap">
+    <ul class="main-menu enabled" id="main-menu"><li class="main-menu-item home active">  
+            <a href="../index.html" title="Home" class="sprite"></a>
+        </li>
+        <li class="main-menu-item pupil-book active">
+            <span class="sprite" title="Student's Book"></span>
+            <ul class="navigator pupil-book-navigator"></ul></li>
+        <li class="main-menu-item activity-book">
+           <span class="sprite" title="Workbook"></span>
+            <ul class="navigator activity-book-navigator"></ul></li>
+        <li class="main-menu-item media">
+            <span class="sprite" title="Media Library"></span>
+            <ul class="sub-menu" id="sub-menu-media"><li class="sub-menu-item video-popup">    
+                    <span class="sprite" title="Videos"></span>
+                </li>
+                <li class="sub-menu-item audio-popup">   
+                    <span class="sprite" title="Extra Audio"></span>
+                </li>
+                <li class="sub-menu-item flashcard-popup">    
+                    <span class="sprite" title="Flashcards"></span>
+                </li>
+            </ul></li>
+        <li class="main-menu-item resource-popup">
+            <span class="sprite" title="Resources"></span>
+        </li>
+        <li class="main-menu-item link-popup active">
+            <span class="sprite" title="Links"></span>
+        </li>
+        <li class="main-menu-item bookmark active">
+            <span class="sprite" title="Bookmarks"></span>
+            <ul class="sub-menu" id="sub-menu-bookmark"><li class="sub-menu-item return active">   
+                    <span class="sprite" title="Return"></span>
+                </li>
+                <li class="sub-menu-item add active">  
+                    <span class="sprite" title="Add bookmark"></span>
+                </li>
+                <li class="sub-menu-item list-popup active">   
+                    <span class="sprite" title="Bookmark list"></span>
+                </li>
+            </ul></li>
+        <li class="main-menu-item note active">
+            <span class="sprite" title="Notes"></span>
+            <ul class="sub-menu" id="sub-menu-note"><li class="sub-menu-item add-note active">      
+                    <span class="sprite" title="Add Note"></span>
+                </li>
+                <li class="sub-menu-item add-attachment active">    
+                    <span class="sprite" title="Add Attachment"></span>
+                </li>
+            </ul></li>
+        <li class="main-menu-item mask active">
+            <span class="sprite" title="Mask"></span>
+        </li>
+        <li class="main-menu-item notepad active">
+            <span class="sprite" title="Notepad"></span>
+        </li>
+    </ul><div id="title-bar">
+        Appendices                    <span class="sprite answer-key-toggle" title="Answer Key"></span>
+                <span class="sprite zoom zoom-in" title="Zoom In"></span>
+        <div id="answer-key-nav">
+            <ul></ul></div>
+    </div>
+    
+</div>
+    
+
+ 
+    <noscript data-type="popup" data-id="video-popup"> 
+
+        <div class="popup video-popup">
+            <span class="sprite close-popup"></span>
+            <h2 class="popup-title">Video</h2>
+
+            <div id="video-player-wrap">
+                <div id="video-player-placeholder"></div>
+                <div id="transcript-buttons" class="video hidden">
+                    <button id="toggle-transcript">Show transcript</button>
+                    <button id="transcript-highlight" class="sprite hidden"></button>
+                </div>
+            </div>
+            <div id="video-gallery-wrap">
+                <ul id="video-gallery"></ul></div>
+            <div id="transcript-wrap" class="hidden"></div>
+        </div>
+    </noscript> 
+
+    
+ 
+    <noscript data-type="popup" data-id="audio-popup"> 
+        <div class="popup audio-popup">
+                <span class="sprite close-popup"></span>
+            <h2 class="popup-title">Audio</h2>
+                <ul id="audio-gallery"><div class="audio-gallery-row">
+                                        </div>
+                </ul><div id="audio-player-wrap"></div>
+                <div id="transcript-buttons" class="audio hidden">
+                    <button id="toggle-transcript">Show transcript</button>
+                    <button id="transcript-highlight" class="sprite hidden"></button>
+                </div>
+                <div id="transcript-wrap" class="hidden"></div>
+        </div>
+    </noscript> 
+      
+    <noscript data-type="popup" data-id="flashcard-popup"> 
+<div class="popup flashcard-popup">
+        <span class="sprite close-popup"></span>
+    <h2 class="popup-title">Flashcards</h2>
+    
+    <div class="carousel">
+        <span class="sprite nav nav-prev enabled" id="prev-flashcard"></span>
+        <div class="carousel-content-wrap">
+            <ul class="carousel-content"></ul></div>
+        <span class="sprite nav nav-next enabled" id="next-flashcard"></span>
+    </div>
+</div>
+ 
+    </noscript> 
+  
+    
+    <noscript data-type="popup" data-id="link-popup"> 
+<div class="popup link-popup">
+        <span class="sprite close-popup"></span>
+    <h2 class="popup-title">Links</h2>
+    <ul id="list-link"><li class="link">
+                <a target="_blank" href="http://www.cambridgelms.org/main/p/splash">
+            Cambridge Learning Management System        </a>
+    </li>
+
+    <li class="link">
+                <a target="_blank" href="http://www.cambridge.org/cambridgeenglish/catalog/secondary/american-think">
+            American Think website        </a>
+    </li>
+
+    <li class="link">
+                <a target="_blank" href="http://dictionary.cambridge.org/dictionary/essential-american-english/">
+            Cambridge Dictionary        </a>
+    </li>
+
+    <li class="link">
+                <a target="_blank" href="mailto:lms.support@cambridge.org">
+            Customer Support        </a>
+    </li>
+    </ul><div class="buttons-wrap">
+        <button id="add-link-button" class="button">Add link</button>
+    </div>
+</div>
+ 
+    </noscript> 
+
+    <noscript data-type="dialog" id="new-link-dialog-template"> 
+        <div id="new-link-dialog">
+            Link name <br><input type="text" id="link-name" value=""><br>
+            Link address <br><input type="text" value="" id="link-address" placeholder="www."><br><div class="buttons-wrap">
+                <button id="new-link-button-accept" class="button">Accept</button>
+                <button id="new-link-button-cancel" class="button">Cancel</button>
+            </div>
+        </div>
+    </noscript>
+        
+
+     
+    <noscript data-type="popup" data-id="resource-popup"> 
+<div class="popup resource-popup">
+        <span class="sprite close-popup"></span>
+    <h2 class="popup-title">Resources</h2>
+    <ul><li class="resource">
+                <a target="_blank" href="resources/pdf/pp_help_guide.pdf">
+            Help guide 
+        </a>
+    </li>
+
+ 
+    
+    <li class="resource">
+                <a target="_blank" href="resources/pdf/9781316500231emt_p250_304.pdf">
+            Teacher's edition appendices 
+        </a>
+    </li>
+    </ul></div>
+ 
+    </noscript> 
+
+<noscript data-type="popup" data-id="pupil-popup"> 
+    <div class="popup pupil-popup ">
+        <h2 class="popup-title">Student's Book</h2>
+        <div class="carousel">
+            <span class="sprite  nav nav-prev enabled" id="prev-book-page"></span>
+            <div class="carousel-content-wrap">
+                <ul class="carousel-content"><li class="page-thumb" data-book="pupil" data-page-id="83f365335710d4e54c06194bc80ab7e2">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_sb_p120_th.jpg"><div class="page-number">
+                                Page 120                            </div>
+                        </li>
+                                                                    <li class="page-thumb" data-book="pupil" data-page-id="c99c0bd35fcfbb8b8682329689badcb6">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_sb_p121_th.jpg"><div class="page-number">
+                                Page 121                            </div>
+                        </li>
+                                                                    <li class="page-thumb" data-book="pupil" data-page-id="49931c824318c09812132b79a8007e64">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_sb_p122_th.jpg"><div class="page-number">
+                                Page 122                            </div>
+                        </li>
+                                                                    <li class="page-thumb" data-book="pupil" data-page-id="0d5565c3fb334032629b63e5c39c457d">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_sb_p123_th.jpg"><div class="page-number">
+                                Page 123                            </div>
+                        </li>
+                                                                    <li class="page-thumb" data-book="pupil" data-page-id="5ff671dc1ed69b112c00d7ff5d14c317">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_sb_p124_th.jpg"><div class="page-number">
+                                Page 124                            </div>
+                        </li>
+                                                                    <li class="page-thumb" data-book="pupil" data-page-id="bfe00150fa1301a2422e350e94f1a9e3">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_sb_p125_th.jpg"><div class="page-number">
+                                Page 125                            </div>
+                        </li>
+                                                                    <li class="page-thumb" data-book="pupil" data-page-id="b7d6ec97cceb7c2802d8a91bc1abdeb8">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_sb_p126_th.jpg"><div class="page-number">
+                                Page 126                            </div>
+                        </li>
+                                                                    <li class="page-thumb" data-book="pupil" data-page-id="f20079158c76893ec5c5b0ba6f5884c4">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_sb_p127_th.jpg"><div class="page-number">
+                                Page 127                            </div>
+                        </li>
+                                                                    <li class="page-thumb" data-book="pupil" data-page-id="9e5face206e0ea152f99a2b4f98ace24">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_sb_p128_th.jpg"><div class="page-number">
+                                Page 128                            </div>
+                        </li>
+                                    </ul></div>
+            <span class="sprite  nav nav-next enabled" id="next-book-page"></span>
+        </div>
+    </div>
+</noscript>
+<noscript data-type="popup" data-id="activity-popup"> 
+    <div class="popup activity-popup">
+        <h2 class="popup-title">Workbook</h2>
+        <div class="carousel">
+            <span class="sprite  nav nav-prev enabled" id="prev-book-page"></span>
+            <div class="carousel-content-wrap">
+                <ul class="carousel-content"><li class="page-thumb" data-book="activity" data-page-id="406bc1dad84bc3729c93d5d9ae20617b">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_wb_p118_th.jpg"><div class="page-number">
+                                Page 118                            </div>
+                        </li>
+                                                                    <li class="page-thumb" data-book="activity" data-page-id="cf8ed7b042e80046e928be556a08c9b4">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_wb_p119_th.jpg"><div class="page-number">
+                                Page 119                            </div>
+                        </li>
+                                                                    <li class="page-thumb" data-book="activity" data-page-id="9567bc2e426f7dc1f1eaa81001590302">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_wb_p120_th.jpg"><div class="page-number">
+                                Page 120                            </div>
+                        </li>
+                                                                    <li class="page-thumb" data-book="activity" data-page-id="030f51d2424f0e395b4a2687a7063dcc">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_wb_p121_th.jpg"><div class="page-number">
+                                Page 121                            </div>
+                        </li>
+                                                                    <li class="page-thumb" data-book="activity" data-page-id="8c25d6739ccff18da3f439b173242bb9">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_wb_p122_th.jpg"><div class="page-number">
+                                Page 122                            </div>
+                        </li>
+                                                                    <li class="page-thumb" data-book="activity" data-page-id="b6f48e5c63b54a6ddaea411fe946f9b8">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_wb_p123_th.jpg"><div class="page-number">
+                                Page 123                            </div>
+                        </li>
+                                                                    <li class="page-thumb" data-book="activity" data-page-id="3f9eb9292c792f0c2048ee991b8a4d76">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_wb_p124_th.jpg"><div class="page-number">
+                                Page 124                            </div>
+                        </li>
+                                                                    <li class="page-thumb" data-book="activity" data-page-id="42c7a946d9a2a5cbe678f54f79119f87">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_wb_p125_th.jpg"><div class="page-number">
+                                Page 125                            </div>
+                        </li>
+                                                                    <li class="page-thumb" data-book="activity" data-page-id="e397fb8aaeab0e372c467052f6749fe1">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_wb_p126_th.jpg"><div class="page-number">
+                                Page 126                            </div>
+                        </li>
+                                                                    <li class="page-thumb" data-book="activity" data-page-id="35add5935e19c8f94bcae94e40178c68">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_wb_p127_th.jpg"><div class="page-number">
+                                Page 127                            </div>
+                        </li>
+                                                                    <li class="page-thumb" data-book="activity" data-page-id="997d445b0a0af0638ad591fa72726e6a">
+                            <span class="sprite page-bookmarked hidden"></span>
+                            <img src="resources/paginas/th_ae_l0_wb_p128_th.jpg"><div class="page-number">
+                                Page 128                            </div>
+                        </li>
+                                    </ul></div>
+            <span class="sprite  nav nav-next enabled" id="next-book-page"></span>
+        </div>
+    </div>
+</noscript>
+<noscript data-type="popup" data-id="bookmark-list-popup"> 
+    <div class="popup bookmark-list-popup">
+        <span class="sprite close-popup"></span>
+        <h2 class="popup-title">Bookmarks</h2>
+        <div id="bookmark-list">
+
+        </div>
+    </div>
+</noscript>
+
+
+    <div id="popupView" class="ntx-popup"></div>
+    <div id="pageView" class="content" touch-action="none" data-trans-out-forward="fadeOut" data-trans-out-rewind="fadeOut" data-trans-in="fadeIn"></div>
+    
+ <noscript data-page-title="sb_p120" data-page-number="120" data-type="content" data-book="pupil" data-page-id="83f365335710d4e54c06194bc80ab7e2">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+        
+
+<div class="resources-tab left" style="top : 210px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="e9676872616cbf80de6a5eb290da8455" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_1_18.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 210px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="5aad159186b075b1de2ed718af4fac17" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_1_47.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab left" style="top : 330px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="363f2f6a74295209b48375ad9100b144" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_1_19.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 330px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="8523d20558388db8833939417f4ce2d7" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_1_48.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab left" style="top : 410px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="9064e54f62cfa191427883a39180a71c" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_1_27.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 485px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="3dd544c894a6acdf387a01c22c04a1d0" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_1_54.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab left" style="top : 580px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="c269075b4594a967c03fa6b26019356a" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_1_28.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 565px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="0db05da02200d8c941142314af61de35" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_1_55.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 650px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="1ae1ec50b6acfcd1bf12a8dd58edf962" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_1_65.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 795px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="1e45b49f4bd8d6cd8da6e2736b2b9fe9" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_1_66.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab left" style="top : 660px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="23633464062479330cb7f26537e30a1b" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_1_36.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab left" style="top : 815px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="36998f4244afdf96958bd1184beec583" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_1_37.mp3">
+                            </div>
+            </div>        
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_sb_p120.jpg"><canvas id="page-canvas-83f365335710d4e54c06194bc80ab7e2" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+            
+        
+ 
+        
+
+ <noscript data-page-title="sb_p121" data-page-number="121" data-type="content" data-book="pupil" data-page-id="c99c0bd35fcfbb8b8682329689badcb6">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+        
+
+<div class="resources-tab left" style="top : 95px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="54847865f0283d98d8a70b323a456b8e" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_2_03.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 60px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="4ff404d187587dab9f97dfd8a46e6290" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_2_26.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 145px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="f5f142d8bf586a1fb1c01aaeae16e58c" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_2_27.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 230px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="59155db07313f0ff6c9adfe2776a5b65" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_2_35.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 345px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="48c7dfc08af1b760232ce6027a78a7e2" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_2_36.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 610px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="907d141edfbe656d7648ee2cbe4eef70" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_2_42.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 805px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="7fbdd03ebbf78c337d39b72ae284c9fa" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_2_49.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 690px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="ef3b031e4dde19ec156fee7b914b3f82" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_2_48.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 485px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="d51799d8e8eec897d7dfcf4ae9e2cd1d" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_2_41.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab left" style="top : 270px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="f8cdfeee48cdedfeb389449b3cf32d9c" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_2_04.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab left" style="top : 355px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="11060ee197782cb960cf043dd6c1c174" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_2_17.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab left" style="top : 560px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="af9075ade4264ffdd0dea13e5a8ace65" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_2_18.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab left" style="top : 645px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="ca22173fc15c53a0835c71f5f74524a2" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/am_think_sb0_2_26.mp3">
+                            </div>
+            </div>        
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_sb_p121.jpg"><canvas id="page-canvas-c99c0bd35fcfbb8b8682329689badcb6" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+            
+        
+ 
+        
+
+ <noscript data-page-title="sb_p122" data-page-number="122" data-type="content" data-book="pupil" data-page-id="49931c824318c09812132b79a8007e64">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+                
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_sb_p122.jpg"><canvas id="page-canvas-49931c824318c09812132b79a8007e64" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="1" data-book="pupil" data-color="" data-page-id="49931c824318c09812132b79a8007e64" data-answer-key-id="f9c8fd0e2890dabe98253d707ff7bd46" data-title="Exercise">
+             <div class="statement">
+        	 <p><strong>The verb <em>be</em></strong></p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>Correct: 3, 6</p> <p>1 The house is very big.</p> <p>2 How old are you?</p> <p>4 Are you 13 years old?</p> <p>5 What is your name? / What’s your name?</p> <p>7 My name is John.</p> <p>8 Is Houston in Texas?</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="1" data-book="pupil" data-color="#C92824" data-page-id="49931c824318c09812132b79a8007e64" data-answer-key-id="94e707b9fa2a33a787eddfa69afbb057" data-title="Exercise">
+             <div class="statement">
+        	 <p><strong>Subject pronouns and<em> be</em></strong></p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 It is / It’s very hot.</p> <p>2 It is / It’s yellow.</p> <p>3 She is / She’s from Mexico.</p> <p>4 They are / They’re in One Direction.</p> <p>5 He is / He’s 15 years old.</p> <p>6 … because it is / it’s very small.</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="2" data-book="pupil" data-color="" data-page-id="49931c824318c09812132b79a8007e64" data-answer-key-id="142c08cfb062279f29f2a1862f674280" data-title="Exercise">
+             <div class="statement">
+        	 <p><strong><em>be </em>questions</strong></p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 Is this a problem?</p> <p>2 Are you on vacation?</p> <p>3 How are you?</p> <p>4 Is he a famous person?</p> <p>5 Is this your video game?</p> <p>6 Is she your sister?</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="2" data-book="pupil" data-color="#C92824" data-page-id="49931c824318c09812132b79a8007e64" data-answer-key-id="fb7a2580abd9e8004b4478615394c8d1" data-title="Exercise">
+             <div class="statement">
+        	 <p><strong>Spelling</strong></p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 funny</p> <p>2 excellent</p> <p>3 white</p> <p>4 evening</p> <p>5 morning</p> <p>6 great</p></div>
+            </div>
+        </noscript>
+            
+        
+ 
+        
+
+ <noscript data-page-title="sb_p123" data-page-number="123" data-type="content" data-book="pupil" data-page-id="0d5565c3fb334032629b63e5c39c457d">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+                
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_sb_p123.jpg"><canvas id="page-canvas-0d5565c3fb334032629b63e5c39c457d" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="3" data-book="pupil" data-color="" data-page-id="0d5565c3fb334032629b63e5c39c457d" data-answer-key-id="8f308a7e7d3aeb5f50a4138dee951e36" data-title="Exercise">
+             <div class="statement">
+        	 <p><strong>Possessive <em>'s</em></strong></p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 my sister’s homework</p> <p>2 my friend’s name</p> <p>3 my friend’s party</p> <p>4 my friend’s family</p> <p>5 my sister’s birthday</p> <p>6 my brother’s bedroom</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="3" data-book="pupil" data-color="#C92824" data-page-id="0d5565c3fb334032629b63e5c39c457d" data-answer-key-id="54aeb7c45e7bb10669eca277d1c46ba9" data-title="Exercise">
+             <div class="statement">
+        	 <p><strong>Family vocabulary</strong></p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 mother</p> <p>2 grandmother</p> <p>3 brother</p> <p>4 father</p> <p>5 son</p> <p>6 daughters</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="4" data-book="pupil" data-color="" data-page-id="0d5565c3fb334032629b63e5c39c457d" data-answer-key-id="9b8996d1a6cc6ada7d487163dd2c050a" data-title="Exercise">
+             <div class="statement">
+        	 <p><strong><em>There is / there are</em></strong></p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 In the kitchen there are two windows.</p> <p>2 In Manhattan there is a nice park.</p> <p>3 Are there any other drinks?</p> <p>4 In my room there is a bed.</p> <p>5 It is great because there are lots of stores.</p> <p>6 Near my city there are many interesting places.</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="4" data-book="pupil" data-color="#C92824" data-page-id="0d5565c3fb334032629b63e5c39c457d" data-answer-key-id="2aa8642617c4c4355a0150ed59acba55" data-title="Exercise">
+             <div class="statement">
+        	 <p><strong>Prepositions of place</strong></p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 in front of</p> <p>2 next to</p> <p>3 behind</p> <p>4 between</p> <p>5 across from</p> <p>6 next to</p></div>
+            </div>
+        </noscript>
+            
+        
+ 
+        
+
+ <noscript data-page-title="sb_p124" data-page-number="124" data-type="content" data-book="pupil" data-page-id="5ff671dc1ed69b112c00d7ff5d14c317">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+                
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_sb_p124.jpg"><canvas id="page-canvas-5ff671dc1ed69b112c00d7ff5d14c317" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="5" data-book="pupil" data-color="" data-page-id="5ff671dc1ed69b112c00d7ff5d14c317" data-answer-key-id="1a3800dfd99f0cc960a021d099cdf46f" data-title="Exercise">
+             <div class="statement">
+        	 <p><strong>Simple present: affirmative</strong></p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 eats</p> <p>2 like</p> <p>3 goes</p> <p>4 works</p> <p>5 play</p> <p>6 starts</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="5" data-book="pupil" data-color="#C92824" data-page-id="5ff671dc1ed69b112c00d7ff5d14c317" data-answer-key-id="e2ea928bf074eed9d1041abae1fe4644" data-title="Exercise">
+             <div class="statement">
+        	 <p><strong>Simple present: negative</strong></p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 doesn’t</p> <p>2 doesn’t</p> <p>3 don’t</p> <p>4 doesn’t</p> <p>5 doesn’t</p> <p>6 don’t</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="6" data-book="pupil" data-color="" data-page-id="5ff671dc1ed69b112c00d7ff5d14c317" data-answer-key-id="6a7d7992d4169e5aec9f0f52b80587c4" data-title="Exercise">
+             <div class="statement">
+        	 <p><strong>Count and noncount nouns</strong></p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 a</p> <p>2 a</p> <p>3 some</p> <p>4 a</p> <p>5 some</p> <p>6 some</p></div>
+            </div>
+        </noscript>
+            
+        
+ 
+        
+
+ <noscript data-page-title="sb_p125" data-page-number="125" data-type="content" data-book="pupil" data-page-id="bfe00150fa1301a2422e350e94f1a9e3">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+                
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_sb_p125.jpg"><canvas id="page-canvas-bfe00150fa1301a2422e350e94f1a9e3" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="7" data-book="pupil" data-color="" data-page-id="bfe00150fa1301a2422e350e94f1a9e3" data-answer-key-id="64393a988de6d4dc0d6d79741f3c6cb7" data-title="Exercise">
+             <div class="statement">
+        	 <p><strong><em>can / can't</em></strong></p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 Can you speak Spanish?</p> <p>2 We want to do some shopping.</p> <p>3 You need to clean your room.</p> <p>4 I need to eat something.</p> <p>5 He can’t do his homework.</p> <p>6 Alex wants to do everything.</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="8" data-book="pupil" data-color="" data-page-id="bfe00150fa1301a2422e350e94f1a9e3" data-answer-key-id="796b1f5538a635cde6dd50e2805eabf2" data-title="Exercise">
+             <div class="statement">
+        	 <p><strong><em>like / don't like + -ing</em></strong></p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 I like singing and dancing.</p> <p>2 We love going to the beach.</p> <p>3 She hates watching baseball games.</p> <p>4 They don’t like playing basketball.</p> <p>5 Pedro doesn’t hate studying.</p> <p>6 Anna likes wearing white clothes.</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="9" data-book="pupil" data-color="" data-page-id="bfe00150fa1301a2422e350e94f1a9e3" data-answer-key-id="8cd86dbc8d8ecc1e6bd6d76afb834fd9" data-title="Exercise">
+             <div class="statement">
+        	 <p><strong>Modal verbs: spelling</strong></p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 can’t / cannot</p> <p>2 must not</p> <p>3 would</p> <p>4 can’t / cannot</p> <p>5 Must</p> <p>6 can’t / cannot</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="10" data-book="pupil" data-color="" data-page-id="bfe00150fa1301a2422e350e94f1a9e3" data-answer-key-id="407f8464633391a1be0a87bc1329cfec" data-title="Exercise">
+             <div class="statement">
+        	 <p><strong>Simple past: <em>be</em></strong></p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 were</p> <p>2 correct</p> <p>3 Weren’t</p> <p>4 was</p> <p>5 correct</p> <p>6 was</p> <p>7 correct</p> <p>8 were</p></div>
+            </div>
+        </noscript>
+            
+        
+ 
+        
+
+ <noscript data-page-title="sb_p126" data-page-number="126" data-type="content" data-book="pupil" data-page-id="b7d6ec97cceb7c2802d8a91bc1abdeb8">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+                
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_sb_p126.jpg"><canvas id="page-canvas-b7d6ec97cceb7c2802d8a91bc1abdeb8" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="11" data-book="pupil" data-color="" data-page-id="b7d6ec97cceb7c2802d8a91bc1abdeb8" data-answer-key-id="a192bfc55186a9ba31fc247676db0dd8" data-title="Exercise">
+             <div class="statement">
+        	 <p><strong>Simple past: irregular verbs</strong></p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 made</p> <p>2 gave</p> <p>3 took</p> <p>4 were</p> <p>5 came</p> <p>6 swam</p> <p>7 went</p> <p>8 made</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="11" data-book="pupil" data-color="#C92824" data-page-id="b7d6ec97cceb7c2802d8a91bc1abdeb8" data-answer-key-id="8d24d224a6e926f033a79c25510e3ef1" data-title="Exercise">
+             <div class="statement">
+        	 <p><strong>Simple past: negative</strong></p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 don’t</p> <p>2 didn’t</p> <p>3 didn’t</p> <p>4 don’t</p> <p>5 didn’t</p> <p>6 don’t</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="12" data-book="pupil" data-color="" data-page-id="b7d6ec97cceb7c2802d8a91bc1abdeb8" data-answer-key-id="a0eac90e7c963652a64c32193a9a6793" data-title="Exercise">
+             <div class="statement">
+        	 <p><strong>Comparative adjectives</strong></p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 healthier</p> <p>2 older</p> <p>3 newer</p> <p>4 better</p> <p>5 happier</p> <p>6 friendlier</p> <p>7 easier</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="12" data-book="pupil" data-color="#C92824" data-page-id="b7d6ec97cceb7c2802d8a91bc1abdeb8" data-answer-key-id="9989cd9190800e0d5cdef21488280d8f" data-title="Exercise">
+             <div class="statement">
+        	 <p><strong><em>then, that</em>, and <em>than</em></strong></p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 than</p> <p>2 then</p> <p>3 than</p> <p>4 That</p> <p>5 that</p> <p>6 then</p></div>
+            </div>
+        </noscript>
+            
+        
+ 
+        
+
+ <noscript data-page-title="sb_p127" data-page-number="127" data-type="content" data-book="pupil" data-page-id="f20079158c76893ec5c5b0ba6f5884c4">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+                
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_sb_p127.jpg"><canvas id="page-canvas-f20079158c76893ec5c5b0ba6f5884c4" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+            
+        
+ 
+        
+
+ <noscript data-page-title="sb_p128" data-page-number="128" data-type="content" data-book="pupil" data-page-id="9e5face206e0ea152f99a2b4f98ace24">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+                
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_sb_p128.jpg"><canvas id="page-canvas-9e5face206e0ea152f99a2b4f98ace24" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+            
+        
+ 
+        
+
+ <noscript data-page-title="wb_118" data-page-number="118" data-type="content" data-book="activity" data-page-id="406bc1dad84bc3729c93d5d9ae20617b">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+        
+
+<div class="resources-tab left" style="top : 370px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="525de4f28787780fa87e46becde478c5" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_10.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 485px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="0444f9c91e58988588cd58af9275e9bd" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_17.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 340px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="7592079725f83db4d17886b3b2be54b5" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_14.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab left" style="top : 515px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="2a082816428ae0d92d09f43709296449" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_11.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab left" style="top : 600px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="b24ef71f245f4470bbc0b2437d77222c" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_13.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 605px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="3e9c76d7f32d98a868e00b7c6cfa9ca4" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_17.mp3">
+                            </div>
+            </div>        
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_wb_p118.jpg"><canvas id="page-canvas-406bc1dad84bc3729c93d5d9ae20617b" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="1" data-book="activity" data-color="" data-page-id="406bc1dad84bc3729c93d5d9ae20617b" data-answer-key-id="61281ccb5b4e633b2a1dc18c8de7b9a9" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 / h /</p> <p>2 / w /</p> <p>3 / h /</p> <p>4 / w /</p> <p>5 / w /</p></div>
+            </div>
+        </noscript>
+                
+            <noscript data-type="answer-key" data-active="false" data-number="2" data-book="activity" data-color="" data-page-id="406bc1dad84bc3729c93d5d9ae20617b" data-answer-key-id="a9f608e60b7bfe4c6f4476f69209ec27" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>Lorem ipsum dolor</p></div>
+            </div>
+        </noscript>
+                
+            <noscript data-type="answer-key" data-active="true" data-number="3" data-book="activity" data-color="" data-page-id="406bc1dad84bc3729c93d5d9ae20617b" data-answer-key-id="46fd2469979efad08fda58e46e734ead" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 a</p> <p>2 c</p> <p>3 f</p> <p>4 b</p> <p>5 d</p></div>
+            </div>
+        </noscript>
+                
+            <noscript data-type="answer-key" data-active="false" data-number="4" data-book="activity" data-color="" data-page-id="406bc1dad84bc3729c93d5d9ae20617b" data-answer-key-id="fd25f79a11e2969a8a2d6a285c3c17fc" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>Lorem ipsum dolor</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="false" data-number="1" data-book="activity" data-color="#C92824" data-page-id="406bc1dad84bc3729c93d5d9ae20617b" data-answer-key-id="6b71df49b2775a106ba29f3186beeccd" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>Lorem ipsum dolor</p></div>
+            </div>
+        </noscript>
+                
+            <noscript data-type="answer-key" data-active="true" data-number="2" data-book="activity" data-color="#C92824" data-page-id="406bc1dad84bc3729c93d5d9ae20617b" data-answer-key-id="2383f5ee4e8a15239f31edaa9246789c" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 happy</p> <p>2 sad</p> <p>3 friendly</p> <p>4 busy</p> <p>5 hot</p> <p>6 lot</p> <p>7 funny</p> <p>8 hungry</p> <p>9 store</p> <p>10 bored</p> <p>11 thirsty</p></div>
+            </div>
+        </noscript>
+                
+            <noscript data-type="answer-key" data-active="false" data-number="3" data-book="activity" data-color="#C92824" data-page-id="406bc1dad84bc3729c93d5d9ae20617b" data-answer-key-id="56a2a40c1d31730393045ff617db4e5c" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>Lorem ipsum dolor</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="1" data-book="activity" data-color="#962a8d" data-page-id="406bc1dad84bc3729c93d5d9ae20617b" data-answer-key-id="58e71e329514d521c4f2c7c2e14afb65" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 late</p> <p>2 them</p> <p>3 like</p> <p>4 hot</p> <p>5 this</p> <p>6 get</p> <p>7 famous</p></div>
+            </div>
+        </noscript>
+                
+            <noscript data-type="answer-key" data-active="false" data-number="2" data-book="activity" data-color="#962a8d" data-page-id="406bc1dad84bc3729c93d5d9ae20617b" data-answer-key-id="d28b3c368b97017c796baf396ded58bf" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>Lorem ipsum dolor</p></div>
+            </div>
+        </noscript>
+            
+        
+ 
+        
+
+ <noscript data-page-title="wb_p119" data-page-number="119" data-type="content" data-book="activity" data-page-id="cf8ed7b042e80046e928be556a08c9b4">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+        
+
+<div class="resources-tab left" style="top : 95px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="9cf5c949efe30e81900f2eabfb11cea1" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_19.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 100px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="97489e278a95a55cf575a0ad8a4dc3d6" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_25.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 670px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="c9a7f7264f1c7829c368885df8a215c6" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_26.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab left" style="top : 270px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="c6f4a72c9e3d6fc46cd70349cdd51a34" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_19.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab left" style="top : 545px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="aab4819d183580de776941eee3e618ff" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_23.mp3">
+                            </div>
+            </div>        
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_wb_p119.jpg"><canvas id="page-canvas-cf8ed7b042e80046e928be556a08c9b4" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="1" data-book="activity" data-color="" data-page-id="cf8ed7b042e80046e928be556a08c9b4" data-answer-key-id="052adc0fbf9aef4dc14de6ccda17faf0" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p><strong>Second syllable stressed (left -hand column):</strong> thirteen, fourteen, nineteen, sixteen</p> <p><strong>First syllable stressed (right-hand column</strong>): thirty, sixty, forty, ninety</p></div>
+            </div>
+        </noscript>
+                
+            <noscript data-type="answer-key" data-active="false" data-number="2" data-book="activity" data-color="" data-page-id="cf8ed7b042e80046e928be556a08c9b4" data-answer-key-id="9bf834b36acbf7a7d3c6a818d239f432" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>Lorem ipsum dolor</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="1" data-book="activity" data-color="#C92824" data-page-id="cf8ed7b042e80046e928be556a08c9b4" data-answer-key-id="161f07627d0da0142aed0f508d94043f" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p><strong>One syllable:</strong> helps, looks, sings, walks, works</p> <p><strong>Verbs with two syllables:</strong> chooses, dances, teaches, washes, watches, wishes</p></div>
+            </div>
+        </noscript>
+                
+            <noscript data-type="answer-key" data-active="false" data-number="2" data-book="activity" data-color="#C92824" data-page-id="cf8ed7b042e80046e928be556a08c9b4" data-answer-key-id="4e4ed392af21ea08df9d3151f3e5efc7" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>Lorem ipsum dolor</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="1" data-book="activity" data-color="#962a8d" data-page-id="cf8ed7b042e80046e928be556a08c9b4" data-answer-key-id="a99eb79c6e36d4769313f57969cb937e" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 gr<u>ea</u>t</p> <p>2 gr<u>ay</u></p> <p>3 m<u>a</u>ke</p> <p>4 r<u>ai</u>ny</p> <p>5 s<u>ay</u></p> <p>6 str<u>aig</u>ht</p> <p>7 t<u>a</u>ke</p> <p>8 th<u>ey</u></p> <p>9 w<u>ai</u>ter</p></div>
+            </div>
+        </noscript>
+                
+            <noscript data-type="answer-key" data-active="true" data-number="2" data-book="activity" data-color="#962a8d" data-page-id="cf8ed7b042e80046e928be556a08c9b4" data-answer-key-id="faeab9040012415ce416165d6bdac830" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 gray</p> <p>2 make</p> <p>3 eight</p> <p>4 They</p> <p>5 rainy</p> <p>6 waiter</p> <p>7 face</p> <p>8 great</p> <p>9 take</p> <p>10 straight</p> <p>11 break</p></div>
+            </div>
+        </noscript>
+                
+            <noscript data-type="answer-key" data-active="false" data-number="3" data-book="activity" data-color="#962a8d" data-page-id="cf8ed7b042e80046e928be556a08c9b4" data-answer-key-id="46f2ad12903c0da8598e21da384ba0d4" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>Lorem ipsum dolor</p></div>
+            </div>
+        </noscript>
+            
+        
+ 
+        
+
+ <noscript data-page-title="wb_p120" data-page-number="120" data-type="content" data-book="activity" data-page-id="9567bc2e426f7dc1f1eaa81001590302">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+        
+
+<div class="resources-tab left" style="top : 100px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="3cc54fec7f8dda29610219ca5839c763" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_29.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab left" style="top : 618px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="7a4ed46b40b2f6486f9225bb7908d873" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_30.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 500px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="ded3f77ea35fd96081b77c138c6253c0" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_32.mp3">
+                            </div>
+            </div>        
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_wb_p120.jpg"><canvas id="page-canvas-9567bc2e426f7dc1f1eaa81001590302" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="1" data-book="activity" data-color="" data-page-id="9567bc2e426f7dc1f1eaa81001590302" data-answer-key-id="5f297504034fdaceb06109118e9c29ba" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 t<u>a</u>ll</p> <p>2 <u>aw</u>ful</p> <p>3 dr<u>aw </u></p> <p>4 c<u>a</u>ll</p> <p>5 <u>au</u>tumn</p> <p>6 f<u>a</u>ll</p> <p>7 b<u>a</u>ll</p> <p>8 w<u>a</u>lk</p> <p>9 w<u>a</u>ter</p></div>
+            </div>
+        </noscript>
+                
+            <noscript data-type="answer-key" data-active="true" data-number="2" data-book="activity" data-color="" data-page-id="9567bc2e426f7dc1f1eaa81001590302" data-answer-key-id="e47b253d2bbb9c61d1e226fef9202311" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 walk</p> <p>2 fall</p> <p>3 ball</p> <p>4 August</p> <p>5 daughter</p> <p>6 awful</p> <p>7 draw</p> <p>8 water</p> <p>9 tall</p> <p>10 call</p></div>
+            </div>
+        </noscript>
+                
+            <noscript data-type="answer-key" data-active="false" data-number="3" data-book="activity" data-color="" data-page-id="9567bc2e426f7dc1f1eaa81001590302" data-answer-key-id="b20e9b6cb5da5274014e32dc6c87c103" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>Lorem ipsum dolor</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="1" data-book="activity" data-color="#C92824" data-page-id="9567bc2e426f7dc1f1eaa81001590302" data-answer-key-id="5fafcb003ec0a89a8c8bc2006e48d40f" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 wife</p> <p>2 Russian</p> <p>3 coat</p> <p>4 baseball</p> <p>5 spring</p> <p>6 catch</p> <p>7 stove</p> <p>8 Brazil</p> <p>9 arm</p> <p>10 headphones</p> <p>11 library</p> <p>The intonation pattern is always the same; the voice rises when saying the first three items on the list and falls on the final item.</p></div>
+            </div>
+        </noscript>
+                
+            <noscript data-type="answer-key" data-active="false" data-number="2" data-book="activity" data-color="#C92824" data-page-id="9567bc2e426f7dc1f1eaa81001590302" data-answer-key-id="b68300e2c7ec1d918ac42f41ef089101" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>Lorem ipsum dolor</p></div>
+            </div>
+        </noscript>
+            
+        
+ 
+        
+
+ <noscript data-page-title="wb_p121" data-page-number="121" data-type="content" data-book="activity" data-page-id="030f51d2424f0e395b4a2687a7063dcc">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+        
+
+<div class="resources-tab left" style="top : 95px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="7d53936f221c8892295b44cb22d63b5e" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_36.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab left" style="top : 485px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="4e1cdb73df3064c0873c36c03a552317" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_36.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 355px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="18a9019e043779f920f1c65a605aa18f" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_45.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab right" style="top : 630px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="d274b8944fbedbbfbd8e23c5fc82d353" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_47.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab left" style="top : 700px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="d1c62961cca0d620617bd006a8b531f5" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_38.mp3">
+                            </div>
+            </div>
+
+<div class="resources-tab left" style="top : 780px;">
+	
+            <div class="sprite icon-toggle"></div>
+            
+
+    
+                        <div id="c16ddcb5083009c03894254e9e4101b7" class="sprite audio-resource" accesskey="" title="Audio" data-audio-src="resources/audios_cd/1_39.mp3">
+                            </div>
+            </div>        
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_wb_p121.jpg"><canvas id="page-canvas-030f51d2424f0e395b4a2687a7063dcc" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="1" data-book="activity" data-color="" data-page-id="030f51d2424f0e395b4a2687a7063dcc" data-answer-key-id="048cb136539cb611728ea7ad895acea0" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 fish</p> <p>2 chicken</p> <p>3 fries</p> <p>4 ice cream</p> <p>5 pineapple</p> <p>6 water</p> <p>7 tea</p></div>
+            </div>
+        </noscript>
+                
+            <noscript data-type="answer-key" data-active="true" data-number="2" data-book="activity" data-color="" data-page-id="030f51d2424f0e395b4a2687a7063dcc" data-answer-key-id="23dd890399e719fca56f3fae5030c8fc" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>↑                ↓</p> <p>Chicken or fish</p> <p>↑                ↓</p> <p>Cake or ice cream</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="1" data-book="activity" data-color="#C92824" data-page-id="030f51d2424f0e395b4a2687a7063dcc" data-answer-key-id="72a60a18fb9f5970cdf11788d1ef1a29" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p><strong>One syllable</strong>: helped, liked, lived, played, walked, worked</p> <p><strong>Two syllables</strong>: needed, started, waited, wanted</p></div>
+            </div>
+        </noscript>
+                
+            <noscript data-type="answer-key" data-active="false" data-number="2" data-book="activity" data-color="#C92824" data-page-id="030f51d2424f0e395b4a2687a7063dcc" data-answer-key-id="5b4cf910bb5c9907835b01619a07ebbb" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>Lorem ipsum dolor</p></div>
+            </div>
+        </noscript>
+                
+            <noscript data-type="answer-key" data-active="true" data-number="3" data-book="activity" data-color="#C92824" data-page-id="030f51d2424f0e395b4a2687a7063dcc" data-answer-key-id="b742ee82062234abeb171c8343f6d4a2" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>We only say /id/ when the last sound in the word is a /t/ or a /d/.</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="1" data-book="activity" data-color="#962a8d" data-page-id="030f51d2424f0e395b4a2687a7063dcc" data-answer-key-id="2b20e0016df7fcade3b291a4fc6f1e05" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p><strong>A:</strong> 1 a 2 b 3 c 4 g 5 d 6 f</p> <p><strong>B:</strong> 7 n 8 j 9 m 10 h 11 i 12 l 13 k</p></div>
+            </div>
+        </noscript>
+                
+            <noscript data-type="answer-key" data-active="false" data-number="2" data-book="activity" data-color="#962a8d" data-page-id="030f51d2424f0e395b4a2687a7063dcc" data-answer-key-id="a4d0b9d84cfced7db5fbf700fad0691a" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>Lorem ipsum dolor</p></div>
+            </div>
+        </noscript>
+                  
+            <noscript data-type="answer-key" data-active="true" data-number="1" data-book="activity" data-color="#87A356" data-page-id="030f51d2424f0e395b4a2687a7063dcc" data-answer-key-id="caf9c9f4129d4b492c2ddd9c704acda7" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>1 <u>small</u>er</p> <p>2 <u>quick</u>er</p> <p>3 <u>cheap</u>er</p> <p>4 <u>fast</u>er</p> <p>5 <u>cold</u>er</p> <p>6 <u>saf</u>er</p> <p>7 <u>clos</u>er</p> <p>8 <u>big</u>ger</p> <p>9 <u>hot</u>ter</p> <p>10 <u>fun</u>nier</p> <p>11 <u>eas</u>ier</p> <p>12 <u>heal</u>thier</p> <p>13 <u>hap</u>pier</p> <p>14 <u>far</u>ther</p> <p>15 <u>bet</u>ter</p></div>
+            </div>
+        </noscript>
+                
+            <noscript data-type="answer-key" data-active="false" data-number="2" data-book="activity" data-color="#87A356" data-page-id="030f51d2424f0e395b4a2687a7063dcc" data-answer-key-id="b2e57beb8906e51639e26db25dc33f29" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>Lorem ipsum dolor</p></div>
+            </div>
+        </noscript>
+                
+            <noscript data-type="answer-key" data-active="true" data-number="3" data-book="activity" data-color="#87A356" data-page-id="030f51d2424f0e395b4a2687a7063dcc" data-answer-key-id="31f1b162912719a6eb7ddd3d6b518d64" data-title="Exercise">
+             <div class="statement">
+        	 <p>Lorem ipsum dolor</p></div>
+
+
+
+
+ 
+            <div class="answers">
+                
+<div class="answer-paragraph ">
+        	 <p>first</p></div>
+            </div>
+        </noscript>
+            
+        
+ 
+        
+
+ <noscript data-page-title="wb_p122" data-page-number="122" data-type="content" data-book="activity" data-page-id="8c25d6739ccff18da3f439b173242bb9">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+                
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_wb_p122.jpg"><canvas id="page-canvas-8c25d6739ccff18da3f439b173242bb9" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+            
+        
+ 
+        
+
+ <noscript data-page-title="wb_p123" data-page-number="123" data-type="content" data-book="activity" data-page-id="b6f48e5c63b54a6ddaea411fe946f9b8">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+                
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_wb_p123.jpg"><canvas id="page-canvas-b6f48e5c63b54a6ddaea411fe946f9b8" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+            
+        
+ 
+        
+
+ <noscript data-page-title="wb_p124" data-page-number="124" data-type="content" data-book="activity" data-page-id="3f9eb9292c792f0c2048ee991b8a4d76">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+                
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_wb_p124.jpg"><canvas id="page-canvas-3f9eb9292c792f0c2048ee991b8a4d76" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+            
+        
+ 
+        
+
+ <noscript data-page-title="wb_p125" data-page-number="125" data-type="content" data-book="activity" data-page-id="42c7a946d9a2a5cbe678f54f79119f87">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+                
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_wb_p125.jpg"><canvas id="page-canvas-42c7a946d9a2a5cbe678f54f79119f87" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+            
+        
+ 
+        
+
+ <noscript data-page-title="wb_p126" data-page-number="126" data-type="content" data-book="activity" data-page-id="e397fb8aaeab0e372c467052f6749fe1">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+                
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_wb_p126.jpg"><canvas id="page-canvas-e397fb8aaeab0e372c467052f6749fe1" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+            
+        
+ 
+        
+
+ <noscript data-page-title="wb_p127" data-page-number="127" data-type="content" data-book="activity" data-page-id="35add5935e19c8f94bcae94e40178c68">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+                
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_wb_p127.jpg"><canvas id="page-canvas-35add5935e19c8f94bcae94e40178c68" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+            
+        
+ 
+        
+
+ <noscript data-page-title="wb_p128" data-page-number="128" data-type="content" data-book="activity" data-page-id="997d445b0a0af0638ad591fa72726e6a">
+    
+    <span class="sprite nav-button" id="nav-prev"></span>
+    <div class="content-image-wrap" data-original-width="630">
+                
+        <div class="image-wrap">
+            <div class="draggable-image-wrap">
+                <img class="content-image" src="resources/paginas/th_ae_l0_wb_p128.jpg"><canvas id="page-canvas-997d445b0a0af0638ad591fa72726e6a" class="page-canvas" width="630" height="801"></canvas></div>
+        </div>
+    </div>
+    <span class="sprite nav-button" id="nav-next"></span>
+
+
+    
+	</noscript>
+            
+        
+ 
+        
+    <div id="notepad-container" touch-action="none">
+        <canvas id="notepad-canvas-1" class="notepad-canvas"></canvas><canvas id="notepad-canvas-2" class="notepad-canvas"></canvas><canvas id="notepad-canvas-3" class="notepad-canvas"></canvas><span class="sprite close-popup"></span>
+        <div id="notepad-breadcrumb">
+            <span class="current-page">1</span> of 3
+        </div>
+        <span class="sprite nav-button active" id="notepad-nav-prev"></span>
+        <span class="sprite nav-button active" id="notepad-nav-next"></span>
+    </div>
+    <div id="draw-toolbar" class="dragable expanded active">
+        <div class="sprite toggle"></div>
+        <div class="draw-toolbar-content">
+            <div class="sprite drag"></div>
+            <div id="draw-tools-wrap">
+                <div class="sprite draw-tool pointer" data-tool="pointer" title=""></div>
+                <div class="sprite draw-tool pencil" data-tool="pencil" title="Pen">
+                    <div class="submenu pencil">
+                        <div class="submenu-item pencil-stroke small" data-size="6"></div>
+                        <div class="submenu-item pencil-stroke default" data-size="12"></div>
+                        <div class="submenu-item pencil-stroke big" data-size="40"></div>
+                    </div>
+                </div>
+                <div class="sprite draw-tool marker" data-tool="marker" title="Highlighter">
+                    <div class="submenu marker">
+                        <div class="submenu-item marker-stroke small" data-size="6"></div>
+                        <div class="submenu-item marker-stroke default" data-size="12"></div>
+                        <div class="submenu-item marker-stroke big" data-size="40"></div>
+                    </div>
+                </div>
+                <div class="sprite draw-tool rubber" data-tool="rubber" title="Eraser">
+                    <div class="submenu rubber">
+                        <div class="sprite submenu-item clear-all"></div>
+                        <div class="sprite submenu-item clear-line"></div>
+                    </div>
+                </div>
+                <div class="sprite draw-tool palette" data-tool="palette" title="Colour">
+                    <div class="submenu palette">
+                        <div class="submenu-item color" data-color="#fff" style="background-color:#fff"></div>
+                        <div class="submenu-item color" data-color="#000" style="background-color:#000"></div>
+                        <div class="submenu-item color" data-color="#ec6f34" style="background-color:#ec6f34"></div>
+                        <div class="submenu-item color" data-color="#EC1E24" style="background-color:#EC1E24"></div>
+                        <div class="submenu-item color" data-color="#FCF204" style="background-color:#FCF204"></div>
+                        <div class="submenu-item color" data-color="#3CB64C" style="background-color:#3CB64C"></div>
+                        <div class="submenu-item color" data-color="#04AEEC" style="background-color:#04AEEC"></div>
+                        <div class="submenu-item color" data-color="#242264" style="background-color:#242264"></div>
+                        <div class="submenu-item color" data-color="#951D87" style="background-color:#951D87"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="item-container">
+        <span class="sprite close-item-container"></span>
+        <div id="item-container-placeholder"></div>
+    </div>
+
+    <div id="activity-overlay" class="hidden">
+        <div id="activity-placeholder"></div>
+        <span class="sprite close-activity"></span>
+    </div>
+
+    <div id="audio-resource-player" class="hidden">
+        <div class="header">
+            <span class="sprite drag"></span>
+            <span class="sprite close"></span>
+        </div>
+        <div class="body">
+            <div id="audio-player-wrap"></div>
+            <div id="transcript-buttons" class="audio">
+                <button id="toggle-transcript">Show transcript</button>
+                <button id="transcript-highlight" class="sprite hidden"></button>
+            </div>
+            <div id="transcript-wrap" class="hidden"></div>
+        </div>
+    </div>
+
+    <div id="answer-key-widget" class="hidden">
+        <div class="header">
+            <span class="sprite key"></span>
+            <span class="sprite close"></span>
+            <span class="sprite toggle"></span>
+        </div>
+        <div class="body">
+        </div>
+        <div class="footer">
+            <button id="show-all-keys" class="button button-small active">Show all</button>
+            <button id="next-key" class="button button-small active">Next Item</button>
+            <button id="prev-key" class="button button-small active">Last Item</button>
+        </div>
+    </div>
+
+    <input type="file" class="hidden" id="attachment-upload"></div>
+<div id="dialog-overlay" class="hidden">
+    <div id="dialog-placeholder"></div>
+</div>
+
+
+
+<noscript data-type="dialog" id="delete-note-dialog-template">
+    <div id="delete-note-dialog">
+        Are you sure that you want to delete this note? <br><div class="buttons-wrap">
+            <button id="delete-note-button-accept" class="button">Yes</button>
+            <button id="delete-note-button-cancel" class="button">No</button>
+        </div>
+    </div>
+</noscript>
+
+<noscript data-type="dialog" id="delete-attachment-dialog-template">
+    <div id="delete-attachment-dialog">
+        Are you sure that you want to delete this attachment? <br><div class="buttons-wrap">
+            <button id="delete-attachment-button-accept" class="button">Yes</button>
+            <button id="delete-attachment-button-cancel" class="button">No</button>
+        </div>
+    </div>
+</noscript>
+
+<noscript data-type="dialog" id="attachment-file-size-exceded-dialog-template">
+    <div id="delete-note-dialog">
+        Max file size exceded (1.5Mb)<br><div class="buttons-wrap">
+            <button id="generic-button-accept" class="button">Ok</button>
+        </div>
+    </div>
+</noscript>
+
+<noscript data-type="dialog" id="attachment-file-size-exceded-dialog-template">
+    <div id="delete-note-dialog">
+        Unexpected error saving your file. Filoe too large?<br><div class="buttons-wrap">
+            <button id="generic-button-accept" class="button">Ok</button>
+        </div>
+    </div>
+</noscript>
+
+<noscript data-type="dialog" id="attachment-database-error-dialog-template">
+    <div id="delete-note-dialog">
+        Error accessing local database. Please try again<br><div id="custom-html-placeholder"></div>
+        <div class="buttons-wrap">
+            <button id="generic-button-accept" class="button">Ok</button>
+        </div>
+    </div>
+</noscript>
+
+<noscript data-type="dialog" id="attachment-not-supported-dialog-template">
+    <div id="delete-note-dialog">
+        Attachment functionality is not supported on this device.<br><div id="custom-html-placeholder"></div>
+        <div class="buttons-wrap">
+            <button id="generic-button-accept" class="button">Ok</button>
+        </div>
+    </div>
+</noscript>
+
+<noscript id="audio-player-template">
+    <div class="media presentationPlus ">
+        <div class="media-body">
+                        <div class="netex-audio-player" data-audio-swf-url="./netexAudio.swf" data-audio-player-id="audio_">
+                <div class="netex-audio-container">
+                    <audio preload="none"><source src="" type="audio/mpeg"></source></audio></div>
+                <div class="netex-audio-controls-container">
+                    <div class="netex-audio-controls">
+                        <div class="netex-audio-controls-item netex-audio-button-play-pause-restart netex-audio-button-play"></div>
+                        <div class="netex-audio-time-container">
+                            <span class="netex-audio-time-current">00:00</span>
+                            <div class="netex-audio-progress-bar-container">
+                                <div class="netex-audio-progress-bar">
+                                    <div class="netex-audio-progress-bar-inner"></div>
+                                </div>
+                            </div>
+                            <span class="netex-audio-time-duration">00:00</span>
+                        </div>
+                        <div class="netex-audio-volume-control">
+                                <div class="netex-audio-volume-slider netex-audio-volume-draggable">
+                                    <div class="netex-audio-volume-slider-foreground"></div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</noscript>
+
+
+
+
+
+
+                  <script src="commoncontents/ntxtmp/js/libs/jquery-2.1.1.min.js"></script><script src="commoncontents/kidsBox/js/translate.js"></script><script src="commoncontents/kidsBox/js/libs/mediaelement/mediaelement-and-player.js"></script><script src="commoncontents/kidsBox/js/netex/htmlActivity_min.js"></script><script src="trackingConfig.js"></script><script src="commoncontents/ntxtmp/js/libs/pointerEvents.js"></script><script src="commoncontents/ntxtmp/js/netex/ntxtmp_min.js"></script><script src="commoncontents/ntxtmp/js/netex/model/dbModel.js"></script><style>
+                .Wirisformula:not([width]) {
+                    vertical-align: middle !important;
+                    margin-bottom: -8px !important;
+                }
+            </style><style>
+                .mathquill_image {
+                    vertical-align: middle !important;
+                    margin-top: -3px !important;
+                }
+            </style></body></html>
